@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+    body{
+    background-color:#333;
+}
+
+.box{
+    background-color:white;
+    width:100px;
+    height:100px;
+    animation-name: myanimation;
+    animation-duration:4s;
+    transition-property: transform, background-color,border-radius;
+    transition-duration: 1s;
+    border-radius:7px;
+}
+@keyframes myanimation{
+    0%{background-color: white;border-radius:0 0 0 0;}
+    25%{background-color:red;margin:0px 0px 0px 300px; border-radius:50% 0 0 0;}
+    50%{background-color:green;margin:300px 0px 0px 300px; border-radius:50% 50% 0 0}
+    75%{background-color: blue;margin:300px 0px; border-radius:50% 50% 50% 0}
+    100%{background-color: white;margin:0px; border-radius:50% 50% 50% 50%}
+}
+
+.box:hover{
+    transform: rotateY(180deg);
+    background-color:red;
+    border-radius:50%;
+}
+div.cir{
+    /*background-color:red;
+    width:100px;
+    height:100px;
+    animation-name: vishal;
+    animation-delay:4s;
+    animation duration:3s;*/
+    background-color:white;
+    width:100px;
+    height:100px;
+    animation-name: myanimation;
+    animation-duration:4s;
+    transition-property: transform, background-color,border-radius;
+    transition-duration: 1s;
+    border-radius:7px;
+}
+}
+@keyframes vishal{
+    0%{margin:500px;}
+    25%{margin:750px 750px;}
+    50%{margin:1000px 500px;}
+    75%{margin:750px 250px;}
+    100%{margin:500px;}
+}
+</style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
